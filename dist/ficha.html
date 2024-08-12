@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche des séances</title>
+    <script src="https://kit.fontawesome.com/f767ad1a86.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        html {
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        :root {
+            --win: 404px;
+            --win0: 404px;
+            --w: 10px;
+            --h: 10px; 
+        }
+
+        #rect {
+            position: absolute;
+            min-width: 250px;
+            height: calc(var(--win) - 30px);
+            top: 9px;
+            left: calc(var(--win0)/2 - var(--w)/2 + 10px);
+            border-radius: 50px 10px 50px 50px;
+            border: #000 1px solid;
+            padding: 15px;
+            overflow: auto;
+            display: none;
+        }
+
+        h3 {
+            text-align: center;
+            color: #00347994;
+            position: sticky;
+            z-index: 2;
+            top: 0px;
+            background: #ebedeec8;
+            border-radius: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-family: "Grey Qo", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+        h4 {
+            text-align: center;
+            font-family: "Sofia"
+        }
+        li, p {
+            margin: 5px;
+            text-align: center;
+            border-radius: 20px;
+        }
+        .box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+            max-height: calc(var(--h)/3);
+            min-height: 100px;
+        }
+        #car {
+            scale: 5;
+            display: inline;
+            color: #2f229e;
+        }
+    </style>
+</head>
+<body>
+    <div id="rect">
+        <h1 id="ism"></h1>
+        <div class="box co">
+            <h3>Code</h3>
+            <ol id="f00"></ol>
+            <p id="totco"></p>
+        </div>
+        <div class="box ci">
+            <h3>Circulation</h3>
+            <ol id="0f0"></ol>
+            <p id="totci"></p>
+        </div>
+        <div class="box pa">
+            <h3>Manouvre</h3>
+            <ol id="00f"></ol>
+            <p id="totpa"></p>
+        </div>
+        <div class="box ac">
+            <h3>Paiements</h3>
+            <ol id="flous"></ol>
+            <p id="totac"></p>
+        </div>
+        <h4 id="tot">Total: </h4>
+    </div>
+    <i class="fa-solid fa-car-side fa-beat-fade" id="car"></i>
+    <script src="bundle2.js"></script>
+</body>
+</html>
